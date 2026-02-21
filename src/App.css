@@ -1,0 +1,105 @@
+#root {
+  max-width: 100%;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #a72c2c);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #ff46acec);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, -apple-system, sans-serif;
+    background-color: #1a1a1a;
+    background-image: radial-gradient(#4a3b3b 1px, transparent 0);
+    background-size: 20px 20px;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.app { padding: 1rem; margin: 0 auto; }
+.title { text-align: left; font-size: 2rem; margin-bottom: 2rem; color: #fff; }
+.subtitle { text-align: right; font-size: 1rem; color: #aaa; margin-bottom: 2rem; }
+
+/* Frosted Glass Base Class */
+.frosted {
+    background-color: rgba(45, 45, 45, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* KPI Grid */
+.card {
+    border-radius: 12px;
+    padding: 0.5rem; margin-top:1rem; margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card:hover { border-color: rgba(255, 119, 119, 0.5); transform: scale(1.02); }
+.stat-label { font-size: 1rem; color: #ccc; text-transform: uppercase; margin-bottom: 0.5rem; text-align: center; }
+.stat-value { font-size: 2.2rem; color: #f88; font-weight: bold; text-align: center; }
+
+/* Chart Layouts */
+.chart-wrapper { 
+    border-radius: 12px; 
+    padding: 1rem; 
+    margin: 0.5rem; 
+    background-color: transparent;
+
+}
+
+/* Two‑column layout: sidebar of cards + main chart area */
+
+.two-column-layout {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.cards-column {
+    width: 15vw; /* Fixed width for stability */
+    flex-shrink: 0;
+}
+
+.chart-column {
+    flex-grow: 1;
+}
+
+.chart-wrapper.frosted {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
